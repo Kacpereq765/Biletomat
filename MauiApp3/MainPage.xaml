@@ -36,7 +36,8 @@
                            FontAttributes="Bold"/>
 
                     <Picker SelectedIndex="0"
-                            TextColor="Black">
+                            TextColor="Black"
+                            x:Name="zonePicker">
 
                         <Picker.Items>
                             <x:String>Miejska</x:String>
@@ -47,12 +48,15 @@
 
                     <Label Text="Liczba biletów: 1"
                            TextColor="Black"
-                           FontAttributes="Bold"/>
+                           FontAttributes="Bold"
+                           x:Name="ticketsLabel"/>
 
                     <Stepper Minimum="1"
                              Maximum="10"
                              Increment="1"
-                             Value="1"/>
+                             Value="1"
+                             x:Name="ticketsStepper"
+                             ValueChanged="ticketsStepper_ValueChanged"/>
 
                     <Grid ColumnDefinitions="*,Auto">
 
@@ -61,7 +65,8 @@
                                FontAttributes="Bold"
                                VerticalOptions="Center"/>
 
-                        <Switch Grid.Column="1"/>
+                        <Switch Grid.Column="1"
+                                x:Name="discountSwitch"/>
 
                     </Grid>
 
@@ -71,18 +76,21 @@
                             BackgroundColor="#123C69"
                             TextColor="White"
                             FontAttributes="Bold"
-                            CornerRadius="10"/>
+                            CornerRadius="10"
+                            Clicked="Button_Clicked"/>
 
                     <Label Text="Do zapłaty: 0,00 zł"
                            TextColor="#123C69"
                            FontSize="22"
                            FontAttributes="Bold"
-                           HorizontalOptions="Center"/>
+                           HorizontalOptions="Center"
+                           x:Name="priceLabel"/>
 
                     <Label Text="Wybierz dane i oblicz cenę"
                            TextColor="Black"
                            HorizontalOptions="Center"
-                           HorizontalTextAlignment="Center"/>
+                           HorizontalTextAlignment="Center"
+                           x:Name="resultLabel"/>
 
                 </VerticalStackLayout>
 

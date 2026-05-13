@@ -6,9 +6,6 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
 
-        zonePicker.Items.Add("Miejska");
-        zonePicker.Items.Add("Podmiejska");
-
         zonePicker.SelectedIndex = 0;
     }
 

@@ -56,7 +56,8 @@
                              Increment="1"
                              Value="1"
                              x:Name="ticketsStepper"
-                             ValueChanged="ticketsStepper_ValueChanged"/>
+                             ValueChanged="ticketsStepper_ValueChanged"
+                             BackgroundColor="LightGray"/>
 
                     <Grid ColumnDefinitions="*,Auto">
 
